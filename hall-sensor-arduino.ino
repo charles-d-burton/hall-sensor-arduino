@@ -3,9 +3,16 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 #include <PubSubClient.h>
+#include "credentials.h"
 
-const char* ssid = "prettyflyforawifi";
-const char* password = "";
+/*
+Add a file to the local directory called credentials.h with the following contents
+#define WIFI_SSID "Your SSID here"
+#define WIFI_PASSWD "WLAN AP password here"
+*/
+
+const char[] ssid = WIFI_SSID;
+const char[] password = WIFI_PASSWD;
 const int hallPin = 14;
 const int ledPin = 0;
 const char* mqtt_server = "mosquitto.localdomain";
